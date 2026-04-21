@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>ТЕНИЗ</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial;
+    color: white;
+    overflow-x: hidden;
+  }
+
+  /* ================= VIDEO ================= */
+  .bg-video {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+
+  /* затемнение */
+  .bg-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: -1;
+  }
+
+  /* ================= HEADER ================= */
+  header {
+    text-align: center;
+    padding: 90px 20px;
+  }
+
+  header h1 {
+    font-size: 48px;
+    text-shadow: 0 0 20px rgba(255,255,255,0.2);
+  }
+
+  header p {
+    color: rgba(255,255,255,0.8);
+  }
+
+  /* ================= BUTTON ================= */
+  .btn {
+    margin-top: 20px;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+
+    background: rgba(255,255,255,0.9);
+    color: black;
+    font-weight: bold;
+
+    transition: 0.3s ease;
+  }
+
+  .btn:hover {
+    transform: scale(1.08);
+    background: white;
+  }
+
+  /* ================= SECTION ================= */
+  .section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 60px;
+  }
+
+  /* ================= GLASS CARDS ================= */
+  .card {
+    width: 220px;
+    padding: 20px;
+    text-align: center;
+
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
+
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.2);
+
+    transition: 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-10px);
+    background: rgba(255,255,255,0.2);
+  }
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= VIDEO BACKGROUND ================= -->
+<video class="bg-video" autoplay muted loop playsinline>
+  <source src="video.mp4" type="video/mp4">
+</video>
+
+<div class="bg-overlay"></div>
+
+<!-- ================= CONTENT ================= -->
+<header>
+  <h1>ТЕНИЗ✨</h1>
+  <p>Modern UI • Clean Design • Pro Style</p>
+  <button class="btn">Start</button>
+</header>
+
+<div class="section">
+  <div class="card">🏝 Travel</div>
+  <div class="card">🏔 Nature</div>
+  <div class="card">🌆 Cities</div>
+</div>
+
+</body>
+</html>
